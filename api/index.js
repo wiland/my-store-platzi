@@ -4,7 +4,7 @@ const appRouter = require('./routers');
 const { errorResponseHandler, boomErrorHandler } = require('./middlewares/error.handler');
 
 const server = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 server.use(express.json());
 server.use(bodyParser.json());
